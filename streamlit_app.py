@@ -2,6 +2,7 @@ import streamlit
 import snowflake.connector
 
 
+streamlit.stop()
 
 streamlit.title('My Parents New Healthy Diner')
 
