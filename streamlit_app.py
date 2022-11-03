@@ -4,7 +4,6 @@ import requests
 import pandas
 from urllib.error import URLError
 
-#streamlit.stop()
 
 streamlit.title('My Parents New Healthy Diner')
 
@@ -58,6 +57,8 @@ if streamlit.button('Get Fruit Load List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_data_rows = my_cur.fetchall()
     streamlit.dataframe(my_data_rows)
+
+streamlit.stop()
 
 #Allow user to add fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','jackfruit')
